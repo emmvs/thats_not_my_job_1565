@@ -3,4 +3,9 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def fetch_daily_quote
+    quote_service = QuoteService.new('love')
+    quote_service.call
+  end
 end
